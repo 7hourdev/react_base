@@ -2,8 +2,19 @@ var express = require('express');
 var path = require('path');
 var compression = require('compression');
 var bodyParser = require('body-parser');
+var webpack = require('webpack');
+var webpackDevMiddleware = require("webpack-dev-middleware");
+var webpackHotMiddleware = require("webpack-hot-middleware");
+var webpackConfig = require('./../webpack.config');
 
 var app = express();
+var compiler = webpack(webpackConfig);
+
+app.use(webpackDevMiddleware(compiler,{
+    noInfo: true, publicPath: webpackConfig.output.publicPath
+}));
+
+app.use(webpackHotMiddleware(compiler));
 
 app.use(compression());
 app.use(bodyParser.urlencoded({extended: true}));
