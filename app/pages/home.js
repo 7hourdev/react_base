@@ -1,12 +1,17 @@
 import React from 'react';
-import {Link} from 'react-router';
+import {observer} from 'mobx-react';
 
-export default React.createClass({
-  render() {
+import Page from 'abstract/page';
+
+@observer 
+class Home extends Page{
+  renderNoAuth() {
     return (
     	<div className="container content">
     		<h1>Hello World</h1>
     	</div>
 	);
   }
-})
+}
+
+export default Home;

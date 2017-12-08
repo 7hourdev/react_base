@@ -38,3 +38,10 @@ jspm_packages
 
 public/bundle.js
 config.js
+
+public/bundle.js
+public/bundle.js.gz
+public/bower_components/
+
+.DS_STORE
+yarn.lock

@@ -1,14 +1,13 @@
 # React Starter
-A simple `react` and `node` stack starter package
+A simple `react`, `mobx` and `node` stack starter package
 
 ## Setup
-1. Create a `config.js` in the root of the repo
-2. Export a JSON with a `url` key
+- `yarn install` or `npm install`
 
 ## To Run
 ```
-npm install
-npm install -g webpack webpack-dev-server
 npm start
 ```
-- To run prod, do `npm run start:prod` or `NODE_ENV=production npm start`
+- To run prod, do `npm run start:prod`
+
+
